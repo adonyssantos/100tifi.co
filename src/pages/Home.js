@@ -4,7 +4,7 @@ const Home = () => {
 	  	<article class="Character-item">
 		  <a href="#/character/1">
 		    <img src="image" alt="name" />
-			h2>Character 1</h2>
+			<h2>Character 1</h2>
 		  </a>
 		</article>
 	  </div>
