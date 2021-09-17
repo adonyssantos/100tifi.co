@@ -4,9 +4,6 @@ import { config } from '../config';
 const Character = async () => {
   const id = getHash('/character');
   const character = await getData(config.apiUrl, id);
-
-  console.log(character);
-
   const { image, name, status, species, gender, origin, location } = character;
 
   const view = /* html */ `

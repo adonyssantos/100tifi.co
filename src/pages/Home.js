@@ -10,7 +10,7 @@ const Home = async () => {
     .map(
       character => /* html */ `
 		  <article class="Character-item">
-		    <a href="#/character/${character.id}">
+		    <a href="#/${character.id}">
 		      <img src="${character.image}" alt="${character.name}" />
 			  <h2>${character.name}</h2>
 		    </a>
