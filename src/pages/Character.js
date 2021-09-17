@@ -7,8 +7,7 @@ const Character = async () => {
 
   console.log(character);
 
-  const { image, name, episode, status, species, gender, origin, location } =
-    character;
+  const { image, name, status, species, gender, origin, location } = character;
 
   const view = /* html */ `
 	  <div class="Characters-inner">
@@ -17,7 +16,6 @@ const Character = async () => {
 		  <h2>${name}</h2>
 		</article>
 		<article class="Characters-card">
-		  <h3>Episodes: ${episode}</h3>
 		  <h3>Status: ${status}</h3>
 		  <h3>Species: ${species}</h3>
 		  <h3>Gender: ${gender}</h3>
