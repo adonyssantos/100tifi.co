@@ -1,12 +1,23 @@
-const Home = () => {
+import { getData } from '../utils';
+import { config } from '../config';
+
+const Home = async () => {
+  const characters = await getData(config.apiUrl);
+
   const view = /* html */ `
-	  <div class="Characters">
-	  	<article class="Character-item">
-		  <a href="#/character/1">
-		    <img src="image" alt="name" />
-			<h2>Character 1</h2>
-		  </a>
-		</article>
+  <div class="Characters">
+  ${characters.results
+    .map(
+      character => /* html */ `
+		  <article class="Character-item">
+		    <a href="#/character/${character.id}">
+		      <img src="${character.image}" alt="${character.name}" />
+			  <h2>${character.name}</h2>
+		    </a>
+		  </article>
+		`,
+    )
+    .join('')}
 	  </div>
 	`;
   return view;
